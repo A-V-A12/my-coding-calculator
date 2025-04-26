@@ -24,11 +24,7 @@ public class Main {
     }
 
     public static int mod (int a , int b){
-        try {
-            return a % b;
-        } catch (ArithmeticException e) {
-            System.err.println("Error. Denominator must not be zero.");
-            throw e;
-        }
+        if (b==0) return 0;
+        return a % b;
     }
 }
